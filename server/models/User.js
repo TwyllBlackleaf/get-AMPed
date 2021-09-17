@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const userLinkSchema = require('./UserLink')
 
 const userSchema = new Schema(
   {
@@ -18,7 +19,8 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-    }
+    },
+    userLinks: [userLinkSchema]
   },
   // set this to use virtual below
   {
@@ -43,10 +45,10 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-// // when we query a user, we'll also get another field called `bookCount` with the number of saved books we have
-// userSchema.virtual('bookCount').get(function () {
-//   return this.savedBooks.length;
-// });
+// when we query a user, we'll also get another field called `linkCount` with the number of links the user has
+userSchema.virtual('linkCount').get(function () {
+  return this.userLinks.length;
+});
 
 const User = model('User', userSchema);
 
