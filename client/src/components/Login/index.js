@@ -1,7 +1,12 @@
 import React from "react";
 import "./Login.css";
+// import auth function
 
 function Login() {
+    // function for using POST route to create new user
+
+    // function for using GET route and authentication to log in existing user and create token
+
     return (
         <>
             <form>

@@ -4,7 +4,9 @@ import "./Header.css";
 function Header() {
     return (
         <header>
-            Header
+            <nav>
+                {/* <Link>s to Home, MyProfile, and Login/Signup, as well as Logout button */}
+            </nav>
         </header>
     )
 }
