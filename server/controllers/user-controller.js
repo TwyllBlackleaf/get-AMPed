@@ -3,7 +3,15 @@ const { User } = require('../models');
 // import sign token function from auth
 const { signToken } = require('../utils/auth');
 
-module.exports = {
+const userController = {
+  // get all users for testing
+  async getAllUser(req, res) {
+    const foundUser = await User.find({}).select('-__v');
+    if (!foundUser) {
+      return res.status(400).json({ message: 'cannot find user'});
+    }
+    res.json(foundUser);
+  },
   // get a single user by either their id or their username
   async getSingleUser({ user = null, params }, res) {
     const foundUser = await User.findOne({
@@ -71,3 +79,5 @@ module.exports = {
     return res.json(updatedUser);
   },
 };
+
+module.exports = userController;
