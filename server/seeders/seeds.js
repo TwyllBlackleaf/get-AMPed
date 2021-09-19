@@ -13,8 +13,10 @@ db.once('open', async () => {
     const username = faker.internet.userName();
     const email = faker.internet.email(username);
     const password = faker.internet.password();
+    const displayname = faker.internet.userName();
+    const aboutme = faker.lorem.words(80);
 
-    userData.push({ username, email, password });
+    userData.push({ username, email, password, displayname, aboutme });
   }
 
   const createdUsers = await User.collection.insertMany(userData);
