@@ -1,6 +1,11 @@
 import React from "react";
 import PageContent from "../PageContent";
 
+let ownPage;
+let userId;
+
+
+
 function MyProfile() {
     // function for checking token to make sure user is authenticated.
         // if authenticated, const ownPage = true
