@@ -7,6 +7,8 @@ const Users = [
         username: "Test User 1",
         email: "testuser1@test.com",
         password: "password",
+        displayname: "TestUser1",
+        aboutme: "TestUser1 About Me stuff",
         userLinks: [
             {
                 title: "Test link title 1a",
@@ -29,6 +31,8 @@ const Users = [
         username: "Test User 2",
         email: "testuser2@test.com",
         password: "password",
+        displayname: "TestUser2",
+        aboutme: "TestUser2 About Me stuff",
         userLinks: [
             {
                 title: "Test link title 2a",
@@ -51,6 +55,8 @@ const Users = [
         username: "Test User 3",
         email: "testuser3@test.com",
         password: "password",
+        displayname: "TestUser3",
+        aboutme: "TestUser3 About Me stuff",
         userLinks: [
             {
                 title: "Test link title 3a",
@@ -73,6 +79,8 @@ const Users = [
         username: "Test User 4",
         email: "testuser4@test.com",
         password: "password",
+        displayname: "TestUser4",
+        aboutme: "TestUser4 About Me stuff",
         userLinks: [
             {
                 title: "Test link title 4a",
@@ -110,24 +118,32 @@ const Users = [
         username: "Test User 5",
         email: "testuser5@test.com",
         password: "password",
+        displayname: "TestUser5",
+        aboutme: "TestUser5 About Me stuff",
         userLinks: []
     },
     {
         username: "Test User 6",
         email: "testuser6@test.com",
         password: "password",
+        displayname: "TestUser6",
+        aboutme: "TestUser6 About Me stuff",
         userLinks: []
     },
     {
         username: "Test User 7",
         email: "testuser7@test.com",
         password: "password",
+        displayname: "TestUser7",
+        aboutme: "TestUser7 About Me stuff",
         userLinks: []
     },
     {
         username: "Test User 8",
         email: "testuser8@test.com",
         password: "password",
+        displayname: "TestUser8",
+        aboutme: "TestUser8 About Me stuff",
         userLinks: []
     }
 

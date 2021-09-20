@@ -20,6 +20,14 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    displayname: {
+      type: String,
+      required: true
+    },
+    aboutme: {
+      type: String,
+      maxlength: 240
+    },
     userLinks: [userLinkSchema]
   },
   // set this to use virtual below
