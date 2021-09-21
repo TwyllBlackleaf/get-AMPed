@@ -19,7 +19,8 @@
     "faker": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.9",
-    "multer": "^1.4.3"
+    "multer": "^1.4.3",
+    "npm": "^6.14.15"
   },
   "devDependencies": {
     "mongoose-seed": "^0.6.0",
