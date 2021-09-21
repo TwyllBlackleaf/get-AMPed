@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-class EditForm extends React.component {
+class EditForm extends React.Component {
     constructor(props) {
         super(props);
 
