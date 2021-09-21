@@ -66,12 +66,13 @@ const userController = {
       return res.status(400).json(err);
     }
   },
+
   async updateUserData({user, body}, res){
-    const user = await User.findOne({
+    const updateuser = await User.findOne({
       $or: [{ _id: user ? user._id : params.id }, { username: user ? user.username : params.username }],
     }).select('-__v');
-    const token = signToken(user);
-    if (!user) {
+    const token = signToken(updateuser);
+    if (!updateuser) {
       return res.status(400).json({ message: "Can't find this user" });
     }
     const correctPw = await user.isCorrectPassword(body.password);

@@ -42,3 +42,8 @@ export const saveUserLink = (linkData, token) => {
   });
 };
   
+// image
+const url = "http://localhost:3000/api/image";
+
+export const getItems = () => axios.get(url);
+export const createItem = (image) => axios.post(url, image);
