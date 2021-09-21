@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
+
 mongoose.set('debug', true);
 
 // // image upload everything here -- need to be cleaned up
