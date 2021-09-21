@@ -1,5 +1,5 @@
 import { checkPropTypes } from "prop-types";
-import React, { useState } from "react";
+import React from "react";
 import EditForm from "./EditForm";
 
 // img upload
