@@ -6,8 +6,9 @@ import FileBase64 from 'react-file-base64';
 import { createItem, getItems } from '../../utils/functions';
 
 
-
+// function PageContent({ ownPage, userId }) {
 function PageContent() {
+
     // img
     const [item, setItem] = useState({ title: '', image: '' });
     const [items, setItems] = useState([])
