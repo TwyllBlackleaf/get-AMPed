@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // route to get logged in user's info (needs the token)
 export const getMe = (token) => {
     return fetch('/api/users/me', {
@@ -26,32 +28,22 @@ export const loginUser = (userData) => {
         },
         body: JSON.stringify(userData),
     });
+  };
+
+// save userlink data for a logged in user
+export const saveUserLink = (linkData, token) => {
+  return fetch('/api/users/login', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(linkData),
+  });
 };
+  
+// image
+const url = "http://localhost:3000/api/image";
 
-//   // save book data for a logged in user
-//   export const saveBook = (bookData, token) => {
-//     return fetch('/api/users', {
-//       method: 'PUT',
-//       headers: {
-//         'Content-Type': 'application/json',
-//         authorization: `Bearer ${token}`,
-//       },
-//       body: JSON.stringify(bookData),
-//     });
-//   };
-
-//   // remove saved book data for a logged in user
-//   export const deleteBook = (bookId, token) => {
-//     return fetch(`/api/users/books/${bookId}`, {
-//       method: 'DELETE',
-//       headers: {
-//         authorization: `Bearer ${token}`,
-//       },
-//     });
-//   };
-
-//   // make a search to google books api
-//   // https://www.googleapis.com/books/v1/volumes?q=harry+potter
-//   export const searchGoogleBooks = (query) => {
-//     return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-//   };
+export const getItems = () => axios.get(url);
+export const createItem = (image) => axios.post(url, image);
