@@ -6,7 +6,8 @@ const colors = require('tailwindcss/colors')
 module.export = {
 
     theme: { 
-        screens: {
+
+    screens: {
         small:'480px',
         md: '768px',
         lg: '976px',
@@ -32,7 +33,10 @@ module.export = {
         lg: '24px',
         xl: '48px',
         },
-    }
 
-    }
-};  
+        backgroundImage: { 'background' : "url('/client/src/images/backgroundimage.jpg')",
+
+    },
+}
+}
+}

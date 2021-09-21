@@ -3,8 +3,6 @@ import React from "react";
 
 function Home() {
     return (
-        <main>
-            
 <main className="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
     <header className="h-24 sm:h-32 flex items-center z-30 w-full">
         <div className="container mx-auto px-6 flex items-center justify-between">
@@ -67,8 +65,6 @@ function Home() {
         </div>
     </div>
 </main>
-
-        </main>
     )
 }
 
