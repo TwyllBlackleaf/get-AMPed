@@ -2,7 +2,7 @@ const router = require('express').Router();
 const path = require('path');
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build'));
+  res.sendFile(path.join(__dirname, '../client/public'));
 });
 
 module.exports = router;

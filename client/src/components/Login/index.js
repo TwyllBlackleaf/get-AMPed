@@ -50,7 +50,7 @@ function Login() {
                     <div class="pt-12 pb-12 text-center">
                         <p>
                             Don&#x27;t have an account?
-                            <a href="#" class="font-semibold underline">
+                            <a href="https://get-amped.herokuapp.com" class="font-semibold underline">
                                 Register here.
                             </a>
                         </p>
@@ -58,7 +58,7 @@ function Login() {
                 </div>
             </div>
             <div class="w-1/2 shadow-2xl">
-                <img class="hidden object-cover w-full h-screen md:block" src="/images/object/9.jpg"/>
+                <img class="hidden object-cover w-full h-screen md:block" src="/images/object/9.jpg" alt=''/>
             </div>
         </div>
 

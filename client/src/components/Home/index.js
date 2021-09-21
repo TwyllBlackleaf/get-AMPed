@@ -3,9 +3,9 @@ import React from "react";
 
 function Home() {
     return (
-        <main>
+        <section>
             Home
-        </main>
+        </section>
     )
 }
 
