@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // route to get logged in user's info (needs the token)
 export const getMe = (token) => {
     return fetch('/api/users/me', {
@@ -56,3 +58,9 @@ export const getMe = (token) => {
 //     return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
 //   };
   
+
+// image
+const url = "http://localhost:3000/api/image";
+
+export const getItems = () => axios.get(url);
+export const createItem = (image) => axios.post(url, image);
