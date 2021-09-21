@@ -3,7 +3,9 @@ const {
   createUser,
   getSingleUser,
   getAllUser,
-  login
+  login,
+  updateUserData,
+  saveUserLink,
 } = require('../../controllers/user-controller');
 
 // import middleware
@@ -18,10 +20,15 @@ router
 
 router
   .route('/login')
+  .get(authMiddleware, getSingleUser)
+  .put(authMiddleware, saveUserLink)
   .post(login);
 
 router
   .route('/me')
   .get(authMiddleware, getSingleUser);
+
+router
+  .route('/')
 
 module.exports = router;
