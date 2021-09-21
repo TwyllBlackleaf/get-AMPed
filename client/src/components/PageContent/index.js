@@ -100,9 +100,10 @@ function PageContent({ ownPage, userId }) {
                     </div>
                 ))}
             </div>
+
             {/* Display user content: display name, photo, etc. */}
-            {/* Display edit buttons if ownPage === true */}
-            {/* Display copyable URL to link to page if ownPage === true */}
+                {/* Display edit buttons if ownPage === true */}
+                {/* Display copyable URL to link to page if ownPage === true */}
             <div>
                 <h1 id="displayname">{userData.displayname}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
@@ -113,7 +114,7 @@ function PageContent({ ownPage, userId }) {
             </div>
 
             {/* Iterate through the array of UserLinks */}
-            {/* Display edit buttons if ownPage === true */}
+                {/* Display edit buttons if ownPage === true */}
 
         </>
     )
