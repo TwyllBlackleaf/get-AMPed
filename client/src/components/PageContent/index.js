@@ -1,14 +1,14 @@
 import { checkPropTypes } from "prop-types";
+import React, { useEffect, useState } from "react";
 import EditForm from "./EditForm";
  
 
 // img upload
-import React, { useEffect, useState } from 'react';
 import FileBase64 from 'react-file-base64';
 import { createItem, getItems } from '../../utils/functions';
 
-function PageContent({ ownPage, userId }) {
-    const [userData, setUserData] = useState({});
+function PageContent({ ownPage, userData }) {
+    const [profileData, setProfileData] = useState({});
     const [editMode, setEditMode] = useState("");
 
     // function for GETting User data by userId
@@ -65,9 +65,7 @@ function PageContent({ ownPage, userId }) {
 
             )
         } else {
-            return (
-                <></>
-            )
+            return;
         }
     }
 
@@ -105,11 +103,11 @@ function PageContent({ ownPage, userId }) {
                 {/* Display edit buttons if ownPage === true */}
                 {/* Display copyable URL to link to page if ownPage === true */}
             <div>
-                <h1 id="displayname">{userData.displayname}</h1>
+                <h1 id="displayname">{profileData.displayname}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
             </div>
             <div>
-                <p id="aboutme">{userData.aboutme}</p>
+                <p id="aboutme">{profileData.aboutme}</p>
                 <EditDiv forItem="aboutme"></EditDiv>
             </div>
 
