@@ -1,17 +1,16 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import PageContent from "../PageContent";
-
-
-let ownPage;
-let userId;
+import { getUserData } from "../../utils/API";
 
 function UserPage() {
-    // set constant ownPage to false, and pass it as prop to <PageContent> to prevent rendering of edit buttons
     // get user ID from URL's :id parameter, and pass it as prop to <PageContent>
+    const { id } = useParams();
+    const userData = getUserData(id);
 
     return (
         <main>
-            <PageContent ownPage={ownPage} userId={userId}></PageContent>
+            <PageContent ownPage={false} userData={userData}></PageContent>
         </main>
     )
 }
