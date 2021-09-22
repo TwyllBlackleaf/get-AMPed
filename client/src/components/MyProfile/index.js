@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 import { getMe } from "../../utils/API";
 
 function MyProfile() {
-    var ownPage = false;
+    var ownPage = true;
 
     const [userData, setUserData] = useState({});
 
@@ -34,43 +34,12 @@ function MyProfile() {
         getUserData();
     }, [userDataLength]);
 
-
-
-
-    if (userData) {
-        ownPage = true;
-    }
-
-    function CheckRedirect() {
-        if (!ownPage) {
-            return <Redirect to="/login"></Redirect>
-        } else {
-            return null;
-        }
-    }
-
     return (
         <main>
-            {/* Check if ownPage === true. If not, <Redirect> to Login */}
             {userData.username}
-            {/* <CheckRedirect></CheckRedirect> */}
             <PageContent ownPage={ownPage} userData={userData}></PageContent>
         </main>
     )
-
-
-
-
-
-
-
-
-    return null;
-
-
-
-
-
 }
 
 export default MyProfile;

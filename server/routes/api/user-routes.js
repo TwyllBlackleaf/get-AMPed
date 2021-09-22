@@ -19,7 +19,7 @@ router
   .put(authMiddleware, createUser);
 
 router
-    .route("/profile")
+    .route("/profile/:id")
     .get(getSingleUser)
     .put(authMiddleware, updateUserData);
 

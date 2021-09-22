@@ -14,8 +14,6 @@ function PageContent({ ownPage, userData }) {
     const foo = userData;
     console.log(foo);
 
-    // function for GETting User data by userId
-
     // function for PUTting (or POSTing?) new/edited User data by userId
     // double-check authentication before sending data
 
@@ -68,7 +66,7 @@ function PageContent({ ownPage, userData }) {
 
             )
         } else {
-            return;
+            return null;
         }
     }
 

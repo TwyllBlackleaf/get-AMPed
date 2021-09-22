@@ -12,7 +12,7 @@ export const getMe = (token) => {
 
 // get user data for any user's page 
 export const getUserData = (userId) => {
-    return fetch("api/users/profile", {
+    return fetch(`api/users/profile/${userId}`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
