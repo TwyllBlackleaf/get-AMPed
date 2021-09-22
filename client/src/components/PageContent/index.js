@@ -1,9 +1,8 @@
 import { checkPropTypes } from "prop-types";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import EditForm from "./EditForm";
 
 // img upload
-import { useEffect, useState } from 'react';
 import FileBase64 from 'react-file-base64';
 import { createItem, getItems } from '../../utils/functions';
 

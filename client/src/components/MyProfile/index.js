@@ -5,7 +5,8 @@ import { Redirect } from "react-router-dom";
 
 function MyProfile() {
     const ownPage = false;
-    const userId = getProfile()._id;
+    // const userId = getProfile()._id;
+    let userId;
 
     if (userId) {
         ownPage = true;
@@ -14,6 +15,8 @@ function MyProfile() {
     function CheckRedirect() {
         if (!ownPage) {
             return <Redirect to="/login"></Redirect>
+        } else {
+            return;
         }
     }
 
