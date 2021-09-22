@@ -15,7 +15,7 @@ function Home() {
               in on page. Get AMPED with us.
             </p>
             <p className="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" value="Get Started">Get Started</a>
+      <a href="/login" class="btn btn-lg btn-secondary fw-bold border-white bg-white" value="Get Started">Get Started</a>
     </p>
     </section>
 

@@ -54,7 +54,7 @@ function LoginForm() {
                     <div className="flex justify-center pt-12 md:justify-start md:pl-12 md:-mb-24">
                     </div>
                     <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
-                    <h3 class="text-whitesmoke">Sign In</h3>
+                    <h3 class="text-whitesmoke">Login</h3>
                     <div className="container-content">
                         <form
                         // noValidate
