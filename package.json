@@ -3,18 +3,23 @@
   "version": "0.1.0",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "install": "cd server && npm install && cd ../client && npm install",
-    "build": "cd client && npm run build"
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "autoprefixer": "^9.8.6",
+    "concurrently": "^5.1.0",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
   },
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "foundation-sites": "^6.7.2"
   }
 }
