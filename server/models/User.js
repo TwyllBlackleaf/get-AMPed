@@ -23,8 +23,7 @@ const userSchema = new Schema(
     displayname: {
       type: String,
       default: function() {
-        const displayname = this.username;
-        return displayname
+        return this.username;
       }
     },
     aboutme: {
