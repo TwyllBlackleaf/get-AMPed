@@ -17,8 +17,6 @@ const userController = {
     const foundUser = await User.findOne({
       $or: [{ _id: user ? user._id : params.id }, { username: user ? user.username : params.username }],
     }).select('-__v');
-    console.log(foundUser)
-    console.log('=====', foundUser.username);
 
     if (!foundUser) {
       return res.status(400).json({ message: 'Cannot find a user with this id!' });
@@ -40,9 +38,6 @@ const userController = {
   // {body} is destructured req.body
   async login({ body }, res) {
     const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }] }).select('-__v');
-
-    console.log(user)
-    //console.log('=====username ', user.username);
 
     if (!user) {
       return res.status(400).json({ message: "Can't find this user" });
