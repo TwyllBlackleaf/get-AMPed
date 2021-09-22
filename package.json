@@ -15,6 +15,6 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-   
+    "foundation-sites": "^6.7.2"
   }
 }

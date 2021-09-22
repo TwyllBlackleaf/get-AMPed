@@ -1,12 +1,11 @@
 import React from "react";
 
-
 function Home() {
-    return (
-        <section>
-            Home
-        </section>
-    )
+  return (
+    <div>
+        home
+    </div>
+  );
 }
 
 export default Home;
