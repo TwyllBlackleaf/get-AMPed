@@ -52,7 +52,7 @@ const userLinkSchema = new Schema({
 
 4. Tailwind
 
-<img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" alt="tailwindlogo" height="125">
+<img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" alt="tailwindlogo" height="200">
 
 
 ## Contributors
