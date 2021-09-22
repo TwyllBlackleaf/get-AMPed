@@ -50,12 +50,34 @@ function PageContent({ ownPage, userData }) {
         }
     }
 
+    function addUserLinkDiv(props) {
+        if (ownPage) {
+            return (
+                <form>
+
+                </form>
+            )
+        } else {
+            return null;
+        }
+    }
+
+    // function MapUserLinks({ profileData }) {
+    //     if (profileData.userLinks) {
+    //         return (
+
+    //         )
+    //     } else {
+    //         return null;
+    //     }
+    // }
+
 
     return (
         <>
             {/* Display user content: display name, photo, etc. */}
-                {/* Display edit buttons if ownPage === true */}
-                {/* Display copyable URL to link to page if ownPage === true */}
+            {/* Display edit buttons if ownPage === true */}
+            {/* Display copyable URL to link to page if ownPage === true */}
             <div>
                 <h1 id="displayname">{userData.displayname}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
@@ -66,8 +88,19 @@ function PageContent({ ownPage, userData }) {
             </div>
 
             {/* Iterate through the array of UserLinks */}
-                {/* Display edit buttons if ownPage === true */}
+            {/* Display edit buttons if ownPage === true */}
 
+            <ul>
+                {userData.userLinks?.map((userLink) => (
+                    <li key={userLink._id}>
+                        <h3>{userLink.title}</h3>
+                        <p>{userLink.link}</p>
+                        <p>{userLink.description ? userLink.description : ""}</p>
+
+                        <EditDiv forItem={userLink._id}></EditDiv>
+                    </li>
+                ))}
+            </ul>
         </>
     )
 }
