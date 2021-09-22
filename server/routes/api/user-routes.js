@@ -6,6 +6,7 @@ const {
   login,
   updateUserData,
   saveUserLink,
+  updateDisplayname
 } = require('../../controllers/user-controller');
 
 // import middleware
@@ -19,8 +20,9 @@ router
   .put(authMiddleware, createUser);
 
 router
-    .route("/profile")
+    .route("/profile/:id")
     .get(getSingleUser)
+    .put(authMiddleware, updateDisplayname)
     .put(authMiddleware, updateUserData);
 
 router

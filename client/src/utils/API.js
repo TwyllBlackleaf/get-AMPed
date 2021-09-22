@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 // route to get logged in user's info (needs the token)
 export const getMe = (token) => {
     return fetch('/api/users/me', {
@@ -12,7 +10,7 @@ export const getMe = (token) => {
 
 // get user data for any user's page 
 export const getUserData = (userId) => {
-    return fetch("api/users/profile", {
+    return fetch(`api/users/profile/${userId}`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json'
@@ -51,10 +49,23 @@ export const saveUserLink = (linkData, token) => {
     body: JSON.stringify(linkData),
   });
 };
-  
-// image
-const url = "http://localhost:3000/api/image";
 
-export const getItems = () => axios.get(url);
-export const createItem = (image) => axios.post(url, image);
+export const updateDisplayname = (userData, token) => {
+  return fetch(`/api/users/profile/${userData._id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(userData)
+  });
+};
+  
+// // future development === image
+// import axios from 'axios';
+
+// const url = "http://localhost:3000/api/image";
+
+// export const getItems = () => axios.get(url);
+// export const createItem = (image) => axios.post(url, image);
 

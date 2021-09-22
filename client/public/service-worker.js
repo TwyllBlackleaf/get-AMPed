@@ -2,20 +2,26 @@ const APP_PREFIX = 'AMPed-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
-
-
-
-
 const FILES_TO_CACHE = [
     "./index.html",
+    "../build/index.html",
     "../src/App.css",
     "../src/App.js",
     "../src/index.css",
     "../src/index.js",
-    "../src/components/Main/Main.css",
-    "../src/components/Login/Login.css",
+    "../src/components/Footer/Footer.css",
+    "../src/components/Footer/index.js",
     "../src/components/Header/Header.css",
-    "../src/components/Footer/Footer.css"
+    "../src/components/Header/index.js",
+    "../src/components/Home/index.js",
+    "../src/components/Login/LoginForm/index.js",
+    "../src/components/Login/Signup/index.js",
+    "../src/components/Login/index.js",
+    "../src/components/MyProfile/index.js",
+    "../src/components/PageContent/EditForm/index.js",
+    "../src/components/PageContent/index.js",
+    "../src/components/SignUp/index.js",
+    "../src/components/UserPage/index.js"
   ];
 
   self.addEventListener('activate', function(e) {

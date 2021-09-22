@@ -22,10 +22,40 @@ const userSchema = new Schema(
     },
     displayname: {
       type: String,
+      default: function() {
+        return this.username;
+      }
     },
     aboutme: {
       type: String,
       maxlength: 240
+    },
+    userLink1Title: {
+      type: String
+    },
+    userLink1Description: {
+      type: String
+    },
+    userLink1Link: {
+      type: String
+    },
+    userLink2Title: {
+      type: String
+    },
+    userLink2Description: {
+      type: String
+    },
+    userLink2Link: {
+      type: String
+    },
+    userLink3Title: {
+      type: String
+    },
+    userLink3Description: {
+      type: String
+    },
+    userLink3Link: {
+      type: String
     },
     userLinks: [userLinkSchema]
   },
