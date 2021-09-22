@@ -25,6 +25,7 @@ function MyProfile() {
     return (
         <main>
             {/* Check if ownPage === true. If not, <Redirect> to Login */}
+            {userData.username}
             <CheckRedirect></CheckRedirect>
             <PageContent ownPage={ownPage} userData={userData}></PageContent>
         </main>

@@ -45,13 +45,13 @@ function Signup() {
   return (
     <>
       <form
-        noValidate
-        validated={validated}
+        //noValidate
+        //validated={validated}
         onSubmit={handleSignupSubmit}
       >
         <h2>Sign Up</h2>
         <div>
-          <label for="signupName">Username:</label>
+          <label htmlFor="signupName">Username:</label>
           <input
             type="text"
             id="signupName"
@@ -62,7 +62,7 @@ function Signup() {
           />
         </div>
         <div>
-          <label for="signupPass">Password:</label>
+          <label htmlFor="signupPass">Password:</label>
           <input
             type="text"
             id="signupPass"
@@ -72,7 +72,7 @@ function Signup() {
             required />
         </div>
         <div>
-          <label for="signupEmail">Email:</label>
+          <label htmlFor="signupEmail">Email:</label>
           <input
             type="text"
             id="signupEmail"
