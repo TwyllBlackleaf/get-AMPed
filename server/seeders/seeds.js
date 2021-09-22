@@ -14,6 +14,15 @@ db.once('open', async () => {
           password: "password",
           displayname: "TestUser1",
           aboutme: "TestUser1 About Me stuff",
+          userLink1Title: "Test link title 1a",
+          userLink1Link: "Test link 1a",
+          userLink1Description: "Test link description 1a",
+          userLink2Title: "Test link title 2a",
+          userLink2Link: "Test link 2a",
+          userLink2Description: "Test link description 2a",
+          userLink3Title: "Test link title 3a",
+          userLink3Link: "Test link 3a",
+          userLink3Description: "Test link description 3a",
           userLinks: [
               {
                   title: "Test link title 1a",
@@ -37,6 +46,15 @@ db.once('open', async () => {
           password: "password",
           displayname: "TestUser2",
           aboutme: "TestUser2 About Me stuff",
+          userLink1Title: "Test link title 1b",
+          userLink1Link: "Test link 1b",
+          userLink1Description: "Test link description 1b",
+          userLink2Title: "Test link title 2b",
+          userLink2Link: "Test link 2b",
+          userLink2Description: "Test link description 2b",
+          userLink3Title: "Test link title 3b",
+          userLink3Link: "Test link 3b",
+          userLink3Description: "Test link description 3b",
           userLinks: [
               {
                   title: "Test link title 2a",
@@ -60,6 +78,15 @@ db.once('open', async () => {
               password: "password",
               displayname: "TestUser3",
               aboutme: "TestUser3 About Me stuff",
+              userLink1Title: "Test link title 1c",
+              userLink1Link: "Test link 1c",
+              userLink1Description: "Test link description 1c",
+              userLink2Title: "Test link title 2c",
+              userLink2Link: "Test link 2c",
+              userLink2Description: "Test link description 2c",
+              userLink3Title: "Test link title 3c",
+              userLink3Link: "Test link 3c",
+              userLink3Description: "Test link description 3c",
               userLinks: [
                  {
                   title: "Test link title 3a",
@@ -83,6 +110,15 @@ db.once('open', async () => {
                 password: "password",
                 displayname: "TestUser4",
                 aboutme: "TestUser4 About Me stuff",
+                userLink1Title: "Test link title 1d",
+                userLink1Link: "Test link 1d",
+                userLink1Description: "Test link description 1d",
+                userLink2Title: "Test link title 2d",
+                userLink2Link: "Test link 2d",
+                userLink2Description: "Test link description 2d",
+                userLink3Title: "Test link title 3d",
+                userLink3Link: "Test link 3d",
+                userLink3Description: "Test link description 3d",
                   userLinks: [
                   {
                   title: "Test link title 4a",
