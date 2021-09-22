@@ -5,7 +5,7 @@ const { User, UserLink } = require('../models');
 const userLinkSchema = require('../models/UserLink');
 
 db.once('open', async () => {
-
+ 
   // create user data
   const userData = [
       new User({
