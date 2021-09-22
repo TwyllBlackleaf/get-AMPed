@@ -76,7 +76,7 @@ function Signup() {
         <div>
           <label htmlFor="signupPass">Password:</label>
           <input
-            type="text"
+            type="password"
             id="signupPass"
             name="password"
             onChange={handleInputChange}
