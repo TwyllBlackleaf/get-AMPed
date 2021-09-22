@@ -1,4 +1,6 @@
 import React from "react";
+// import { authMiddleware } from "../../../../../server/utils/auth";
+// import { updateDisplayname } from '../../../utils/API';
 
 class EditForm extends React.Component {
     constructor(props) {
@@ -19,7 +21,24 @@ class EditForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         // use function from API.js to PUT the data from this.state.value into the db using the forItem prop
-    }
+        // const editDisplayname = userData.find((userData) => userData.displayname === displayname);
+
+        // const token = authMiddleware.loggedIn() ? authMiddleware.getToken() : null;
+
+        // if (!token) {
+        //     return false;
+        // }
+        
+        // try {
+        //     const response = await updateDisplayname(editDisplayname, token);
+
+        //     if (!response.ok) {
+        //         throw new Error('something went wrong');
+        //     }
+        // } catch (err) {
+        //     console.log(err);
+        // }
+    };
 
     render() {
         return (

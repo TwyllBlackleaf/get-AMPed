@@ -1,7 +1,6 @@
 import { checkPropTypes } from "prop-types";
 import React, { useEffect, useState } from "react";
 import EditForm from "./EditForm";
-// import { updateDisplayname } from '../../../utils/API';
 
  
 function PageContent({ ownPage, userData }) {
