@@ -62,6 +62,18 @@ function Signup() {
           />
         </div>
         <div>
+          <label htmlFor="displayname">Display Name:</label>
+          <input 
+            type="text" 
+            id="displayname"
+            name="displayname" 
+            defaultValue={userData.displayname} 
+            onChange={handleInputChange} 
+            value={userData.displayname}
+             />
+        </div>
+
+        <div>
           <label htmlFor="signupPass">Password:</label>
           <input
             type="text"
