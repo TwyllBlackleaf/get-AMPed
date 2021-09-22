@@ -50,41 +50,24 @@ function Header() {
                                         </svg>
                                     </button>
                                 </div>
-<<<<<<< HEAD
-                                <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
-                                    <div class="py-1 " role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                        <a href="https://get-amped.herokuapp.com" class="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
-                                            <span class="flex flex-col">
-=======
                                 <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
                                     <div className="py-1 " role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                         <a href="#" className="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
                                             <span className="flex flex-col">
->>>>>>> feature/more-page-content
                                                 <span>
                                                     Settings
                                                 </span>
                                             </span>
                                         </a>
-<<<<<<< HEAD
                                         <a href="https://get-amped.herokuapp.com" class="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
                                             <span class="flex flex-col">
-=======
-                                        <a href="#" className="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
-                                            <span className="flex flex-col">
->>>>>>> feature/more-page-content
                                                 <span>
                                                     Account
                                                 </span>
                                             </span>
                                         </a>
-<<<<<<< HEAD
                                         <a href="https://get-amped.herokuapp.com" class="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
                                             <span class="flex flex-col">
-=======
-                                        <a href="#" className="block block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600" role="menuitem">
-                                            <span className="flex flex-col">
->>>>>>> feature/more-page-content
                                                 <span>
                                                     Logout
                                                 </span>
