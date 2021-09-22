@@ -1,7 +1,7 @@
 import { checkPropTypes } from "prop-types";
 import React, { useEffect, useState } from "react";
 import EditForm from "./EditForm";
- 
+
 
 // img upload
 import FileBase64 from 'react-file-base64';
@@ -22,21 +22,21 @@ function PageContent({ ownPage, userData }) {
     // function for edit mode
 
     // code for images
-    const [item, setItem] = useState({ title: '', image: '' });
-    const [items, setItems] = useState([])
-    const onSubmitHandler = async (e) => {
-        e.preventDefault();
-        const result = await createItem(item);
-        setItems([...items, result]);
-    }
-    useEffect(() => {
-        const fetchData = async () => {
-            const result = await getItems();
-            console.log('fetch data;m', result);
-            setItems(result);
-        }
-        fetchData()
-    }, [])
+    // const [item, setItem] = useState({ title: '', image: '' });
+    // const [items, setItems] = useState([])
+    // const onSubmitHandler = async (e) => {
+    //     e.preventDefault();
+    //     const result = await createItem(item);
+    //     setItems([...items, result]);
+    // }
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const result = await getItems();
+    //         console.log('fetch data;m', result);
+    //         setItems(result);
+    //     }
+    //     fetchData()
+    // }, [])
 
     // code for editing
     function EditButton(props) {
@@ -71,7 +71,7 @@ function PageContent({ ownPage, userData }) {
         if (ownPage) {
             return (
                 <form>
-                    
+
                 </form>
             )
         } else {
@@ -79,10 +79,20 @@ function PageContent({ ownPage, userData }) {
         }
     }
 
+    // function MapUserLinks({ profileData }) {
+    //     if (profileData.userLinks) {
+    //         return (
+
+    //         )
+    //     } else {
+    //         return null;
+    //     }
+    // }
+
 
     return (
         <>
-            <div className="container">
+            {/* <div className="container">
                 <pre>{JSON.stringify(item, null, '\t')}</pre>
                 <form action="" onSubmit={onSubmitHandler}>
                     <input type="text" className="input-field"
@@ -107,11 +117,11 @@ function PageContent({ ownPage, userData }) {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
 
             {/* Display user content: display name, photo, etc. */}
-                {/* Display edit buttons if ownPage === true */}
-                {/* Display copyable URL to link to page if ownPage === true */}
+            {/* Display edit buttons if ownPage === true */}
+            {/* Display copyable URL to link to page if ownPage === true */}
             <div>
                 <h1 id="displayname">{profileData.displayname ? profileData.displayname : "Display Name"}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
@@ -122,20 +132,18 @@ function PageContent({ ownPage, userData }) {
             </div>
 
             {/* Iterate through the array of UserLinks */}
-                {/* Display edit buttons if ownPage === true */}
+            {/* Display edit buttons if ownPage === true */}
 
             <ul>
-                {profileData.userLinks.map((link) => {
-                    return (
-                        <li key={link._id}>
-                            <h3>{link.title}</h3>
-                            <p>{link.link}</p>
-                            <p>{link.description ? link.description : ""}</p>
+                {userData.userLinks?.map((userLink) => (
+                    <li key={userLink._id}>
+                        <h3>{userLink.title}</h3>
+                        <p>{userLink.link}</p>
+                        <p>{userLink.description ? userLink.description : ""}</p>
 
-                            <EditDiv forItem={link._id}></EditDiv>
-                        </li>
-                    )
-                })}
+                        <EditDiv forItem={userLink._id}></EditDiv>
+                    </li>
+                ))}
             </ul>
         </>
     )

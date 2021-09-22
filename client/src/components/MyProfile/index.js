@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import PageContent from "../PageContent";
 import AuthService from "../../utils/auth";
 import { Redirect } from "react-router-dom";
