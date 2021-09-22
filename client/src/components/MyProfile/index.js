@@ -7,6 +7,7 @@ import { getMe } from "../../utils/API";
 function MyProfile() {
     var ownPage = false;
 
+
     const userData = getMe(AuthService.getToken());
 
     if (userData) {
@@ -17,7 +18,7 @@ function MyProfile() {
         if (!ownPage) {
             return <Redirect to="/login"></Redirect>
         } else {
-            return;
+            return null;
         }
     }
 

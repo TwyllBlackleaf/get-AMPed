@@ -11,6 +11,9 @@ function PageContent({ ownPage, userData }) {
     const [profileData, setProfileData] = useState({});
     const [editMode, setEditMode] = useState("");
 
+    const foo = userData;
+    console.log(foo);
+
     // function for GETting User data by userId
 
     // function for PUTting (or POSTing?) new/edited User data by userId
@@ -103,7 +106,7 @@ function PageContent({ ownPage, userData }) {
                 {/* Display edit buttons if ownPage === true */}
                 {/* Display copyable URL to link to page if ownPage === true */}
             <div>
-                <h1 id="displayname">{profileData.displayname}</h1>
+                <h1 id="displayname">{userData.displayname}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
             </div>
             <div>
