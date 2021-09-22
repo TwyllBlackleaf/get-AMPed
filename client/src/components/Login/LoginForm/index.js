@@ -6,7 +6,7 @@ import Auth from '../../../utils/auth';
 
 function LoginForm() {
     const [userData, setUserData] = useState({ username: '', email: '', password: '' });
-    const [validated] = useState(false);
+    // const [validated] = useState(false);
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;

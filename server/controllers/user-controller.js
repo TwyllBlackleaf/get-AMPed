@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 
 const userController = {
   // get all users for testing
-  async getAllUser(req, res) {
+  async getAllUser({ user = null, params }, res) {
     const foundUser = await User.find({}).select('-__v');
     if (!foundUser) {
       return res.status(400).json({ message: 'cannot find user'});
