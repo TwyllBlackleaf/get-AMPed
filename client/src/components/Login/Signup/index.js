@@ -4,7 +4,7 @@ import Auth from '../../../utils/auth';
 
 function Signup() {
   const [userData, setUserData] = useState({ username: '', email: '', password: '' });
-  const [validated] = useState(false);
+  // const [validated] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -61,6 +61,18 @@ function Signup() {
             required
           />
         </div>
+        <div>
+          <label htmlFor="displayname">Display Name:</label>
+          <input 
+            type="text" 
+            id="displayname"
+            name="displayname" 
+            defaultValue={userData.displayname} 
+            onChange={handleInputChange} 
+            value={userData.displayname}
+             />
+        </div>
+
         <div>
           <label htmlFor="signupPass">Password:</label>
           <input

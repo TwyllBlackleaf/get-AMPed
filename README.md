@@ -12,22 +12,52 @@ We created get-AMPed as a tool to help user have easy access to their profiles a
 * [Contributors](#contributors)
 * [Deployed URL](#deployed-url)
 
-
-
 ## How it works:
-
 
 ## Features:
 
-
 ## Technologies Used:
-*Tailwind
+1. React
+```javascript
+import React, { useEffect, useState } from "react";
+```
+![reactlogo](https://cdn.iconscout.com/icon/free/png-256/react-2752089-2284906.png)
 
+
+2. Express/Node
+```javascript
+const router = require('express').Router();
+```
+![nodejslogo](https://cdn.iconscout.com/icon/free/png-256/node-js-1-1174935.png)
+
+
+3. Mongoose
+```javascript
+const userLinkSchema = new Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  link: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  }
+});
+```
+<img src="https://miro.medium.com/max/648/1*iDvsmUwzZQxJSKdL0xzwIA.png" alt="mongooselogo" height="125"/>
+
+
+4. Tailwind
+
+<img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" alt="tailwindlogo" height="200">
 
 
 ## Contributors
+[Deb Orler](https://github.com/dorler), [Kat Dixon](https://github.com/TwyllBlackleaf), [Sue Kim](https://github.com/suekimpaulsen), and [John Mohlenkamp](https://github.com/Mohlenkamp).
+Please click the name to visit their GitHub.
 
 ## Deployed URL
-
-
-Heroku Site: https://get-amped.herokuapp.com/
+via Heroku https://get-amped.herokuapp.com/
