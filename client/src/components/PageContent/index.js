@@ -67,6 +67,18 @@ function PageContent({ ownPage, userData }) {
         }
     }
 
+    function addUserLinkDiv(props) {
+        if (ownPage) {
+            return (
+                <form>
+                    
+                </form>
+            )
+        } else {
+            return null;
+        }
+    }
+
 
     return (
         <>
@@ -112,6 +124,19 @@ function PageContent({ ownPage, userData }) {
             {/* Iterate through the array of UserLinks */}
                 {/* Display edit buttons if ownPage === true */}
 
+            <ul>
+                {profileData.userLinks.map((link) => {
+                    return (
+                        <li key={link._id}>
+                            <h3>{link.title}</h3>
+                            <p>{link.link}</p>
+                            <p>{link.description ? link.description : ""}</p>
+
+                            <EditDiv forItem={link._id}></EditDiv>
+                        </li>
+                    )
+                })}
+            </ul>
         </>
     )
 }
