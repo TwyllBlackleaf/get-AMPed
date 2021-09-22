@@ -5,9 +5,8 @@ function Footer() {
     return (
         <footer className="d-flex h-100 mt-auto text-white-50">
             <p>
-                Get AMP
+                Get AMPed
             </p>
-            Footer
         </footer>
     )
 }
