@@ -1,17 +1,15 @@
 import { checkPropTypes } from "prop-types";
+import React, { useEffect, useState } from "react";
 import EditForm from "./EditForm";
  
 
 // img upload
-import React, { useEffect, useState } from 'react';
 import FileBase64 from 'react-file-base64';
 import { createItem, getItems } from '../../utils/functions';
 
-function PageContent({ ownPage, userId }) {
-    const [userData, setUserData] = useState({});
+function PageContent({ ownPage, userData }) {
+    const [profileData, setProfileData] = useState(userData);
     const [editMode, setEditMode] = useState("");
-
-    // function for GETting User data by userId
 
     // function for PUTting (or POSTing?) new/edited User data by userId
     // double-check authentication before sending data
@@ -48,7 +46,7 @@ function PageContent({ ownPage, userId }) {
     }
 
     function EditInput(props) {
-        if (editMode.forItem === props.forItem) {
+        if (editMode === props.forItem) {
             return <EditForm forItem={props.forItem}></EditForm>
         } else {
             return <></>
@@ -65,9 +63,7 @@ function PageContent({ ownPage, userId }) {
 
             )
         } else {
-            return (
-                <></>
-            )
+            return null;
         }
     }
 
@@ -105,11 +101,11 @@ function PageContent({ ownPage, userId }) {
                 {/* Display edit buttons if ownPage === true */}
                 {/* Display copyable URL to link to page if ownPage === true */}
             <div>
-                <h1 id="displayname">{userData.displayname}</h1>
+                <h1 id="displayname">{profileData.displayname ? profileData.displayname : "Display Name"}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
             </div>
             <div>
-                <p id="aboutme">{userData.aboutme}</p>
+                <p id="aboutme">{profileData.aboutme ? profileData.aboutme : "About Me"}</p>
                 <EditDiv forItem="aboutme"></EditDiv>
             </div>
 

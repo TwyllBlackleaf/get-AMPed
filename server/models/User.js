@@ -22,7 +22,6 @@ const userSchema = new Schema(
     },
     displayname: {
       type: String,
-      required: true
     },
     aboutme: {
       type: String,
