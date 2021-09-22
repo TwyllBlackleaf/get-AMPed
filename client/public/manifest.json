@@ -51,8 +51,8 @@
   "description" : "Your personal customized About Me Page",
   "screenshots": [
     {
-      "src": "/images/screenshot1.png",
-      "type": "image/png",
+      "src": "/images/screenshot1.jpg",
+      "type": "image/jpg",
       "sizes": "540x720"
     },
     {
