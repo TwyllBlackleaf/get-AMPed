@@ -10,6 +10,16 @@ export const getMe = (token) => {
     });
 };
 
+// get user data for any user's page 
+export const getUserData = (userId) => {
+    return fetch("api/users/profile", {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+};
+
 export const createUser = (userData) => {
     return fetch('/api/users', {
         method: 'POST',
@@ -47,3 +57,4 @@ const url = "http://localhost:3000/api/image";
 
 export const getItems = () => axios.get(url);
 export const createItem = (image) => axios.post(url, image);
+

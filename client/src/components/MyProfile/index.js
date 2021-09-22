@@ -1,14 +1,15 @@
 import React from "react";
 import PageContent from "../PageContent";
-import { getProfile } from "../../utils/auth";
+import AuthService from "../../utils/auth";
 import { Redirect } from "react-router-dom";
+import { getMe } from "../../utils/API";
 
 function MyProfile() {
-    const ownPage = false;
-    // const userId = getProfile()._id;
-    let userId;
+    var ownPage = false;
 
-    if (userId) {
+    const userData = getMe(AuthService.getToken());
+
+    if (userData) {
         ownPage = true;
     }
 
@@ -24,7 +25,7 @@ function MyProfile() {
         <main>
             {/* Check if ownPage === true. If not, <Redirect> to Login */}
             <CheckRedirect></CheckRedirect>
-            <PageContent ownPage={ownPage} userId={userId}></PageContent>
+            <PageContent ownPage={ownPage} userData={userData}></PageContent>
         </main>
     )
 }
