@@ -5,7 +5,7 @@ import Auth from '../../../utils/auth';
 // import "./Login.css";
 
 function LoginForm() {
-    const [userData, setUserData] = useState({ email: '', password: '' });
+    const [userData, setUserData] = useState({ username: '', email: '', password: '' });
     const [validated] = useState(false);
 
     const handleInputChange = (event) => {
