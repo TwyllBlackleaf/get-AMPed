@@ -2,7 +2,7 @@ const { Image } = require('../models/Image');
 
 const imageController = {
   async getItems(req, res) {
-    const image = await Image.find({});
+    const image = await Image.find();
     if (!image) {
       return res.status(404).json({ message: error.message });
     }
