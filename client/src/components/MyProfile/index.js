@@ -1,20 +1,29 @@
 import React from "react";
 import PageContent from "../PageContent";
-
-let ownPage;
-let userId;
-
-
+import { getProfile } from "../../utils/auth";
+import { Redirect } from "react-router-dom";
 
 function MyProfile() {
-    // function for checking token to make sure user is authenticated.
-        // if authenticated, const ownPage = true
-        // pass the ownPage constant to <PageContent> as prop so it can render edit buttons
-        // get user ID from token and pass it as prop to <PageContent>
+    const ownPage = false;
+    // const userId = getProfile()._id;
+    let userId;
+
+    if (userId) {
+        ownPage = true;
+    }
+
+    function CheckRedirect() {
+        if (!ownPage) {
+            return <Redirect to="/login"></Redirect>
+        } else {
+            return;
+        }
+    }
 
     return (
         <main>
             {/* Check if ownPage === true. If not, <Redirect> to Login */}
+            <CheckRedirect></CheckRedirect>
             <PageContent ownPage={ownPage} userId={userId}></PageContent>
         </main>
     )
