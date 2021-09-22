@@ -16,7 +16,7 @@ function Header() {
               <ul>
                 <li className="text-white"><Link to="/" className="nav-link text-white" value="About Us">About Us</Link></li>
                 <li className="text-white"><Link to="/login" className="nav-link text-white" value="Login">Login</Link></li>
-                <li className="text-white"><Link to="/login" className="nav-link text-white" value="SignUp">SignUp</Link></li>
+                <li className="text-white"><Link to="/mypage" className="nav-link text-white" value="My Page">My Page</Link></li>
               </ul>
             </nav>
           </div>
