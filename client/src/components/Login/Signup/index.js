@@ -86,7 +86,7 @@ function Signup() {
           <label htmlFor="signupPass" className="text-white">Password:</label>
           <input
           className="form-control"
-            type="text"
+            type="password"
             id="signupPass"
             name="password"
             onChange={handleInputChange}
