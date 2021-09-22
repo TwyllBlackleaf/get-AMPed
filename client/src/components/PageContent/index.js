@@ -57,7 +57,7 @@ function PageContent({ ownPage, userData }) {
                 {/* Display edit buttons if ownPage === true */}
                 {/* Display copyable URL to link to page if ownPage === true */}
             <div>
-                <h1 id="displayname">{userData.displayname}</h1>
+                <h1 className="text-whitesmoke" id="displayname">{userData.displayname}</h1>
                 <EditDiv forItem="displayname"></EditDiv>
             </div>
             <div>
