@@ -9,6 +9,7 @@ We created get-AMPed as a tool to help user have easy access to their profiles a
 * [How it works](#how-it-works)
 * [Features](#features)
 * [Technoliges Used](#technologies-used)
+* [Future Development](#future-development)
 * [Contributors](#contributors)
 * [Deployed URL](#deployed-url)
 
@@ -53,6 +54,12 @@ const userLinkSchema = new Schema({
 4. Tailwind
 
 <img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" alt="tailwindlogo" height="200">
+
+
+## Future Development
+- Image Upload for profile photo
+- Update user data
+- Mobile responsive design
 
 
 ## Contributors
