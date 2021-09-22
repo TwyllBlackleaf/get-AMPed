@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 
 const userController = {
   // get all users for testing
-  async getAllUser({ user = null, params }, res) {
+  async getAllUser(req, res) {
     const foundUser = await User.find({}).select('-__v');
     if (!foundUser) {
       return res.status(400).json({ message: 'cannot find user'});
@@ -17,8 +17,6 @@ const userController = {
     const foundUser = await User.findOne({
       $or: [{ _id: user ? user._id : params.id }, { username: user ? user.username : params.username }],
     }).select('-__v');
-    console.log(foundUser)
-    console.log('=====', foundUser.username);
 
     if (!foundUser) {
       return res.status(400).json({ message: 'Cannot find a user with this id!' });
@@ -41,8 +39,6 @@ const userController = {
   async login({ body }, res) {
     const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }] }).select('-__v');
 
-    console.log(user)
-    //console.log('=====username ', user.username);
 
     if (!user) {
       return res.status(400).json({ message: "Can't find this user" });
@@ -61,10 +57,24 @@ const userController = {
     try {
       const updatedUser = await User.findOneAndUpdate(
         { _id: user._id },
-        { $addToSet: { userLinks: body } },
+        body,
         { new: true, runValidators: true }
       );
       return res.json(updatedUser);
+    } catch (err) {
+      console.log(err);
+      return res.status(400).json(err);
+    }
+  },
+
+  async updateDisplayname({ user, body }, res) {
+    try {
+      const newDisplayname = await User.findOneAndUpdate(
+        { _id: user._id },
+        body,
+        { new: true, runValidators: true }
+      );
+      return res.json(newDisplayname);
     } catch (err) {
       console.log(err);
       return res.status(400).json(err);

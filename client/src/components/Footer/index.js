@@ -1,10 +1,12 @@
 import React from "react";
-import "./Footer.css";
+import "../Home/style.css";
 
 function Footer() {
     return (
-        <footer>
-            Footer
+        <footer className="d-flex h-100 mt-auto text-white-50">
+            <p>
+                Get AMPed
+            </p>
         </footer>
     )
 }
