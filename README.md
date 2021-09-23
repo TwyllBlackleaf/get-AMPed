@@ -14,6 +14,8 @@ We created get-AMPed as a tool to help user have easy access to their profiles a
 * [Deployed URL](#deployed-url)
 
 ## How it works:
+<img src="client/public/images/home.png" alt="home" width="500"/>
+
 1. Click ***Get Started*** to sign up or login to the website
 2. Sign up: User can enter username, email, password, and displayname. If the user chose not to enter the displayname, username will automatically be assigned as displayname
 3. When the user visits My Page, they will see their username, displayname, about me, and links that they added
