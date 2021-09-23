@@ -9,12 +9,23 @@ We created get-AMPed as a tool to help user have easy access to their profiles a
 * [How it works](#how-it-works)
 * [Features](#features)
 * [Technoliges Used](#technologies-used)
+* [Future Development](#future-development)
 * [Contributors](#contributors)
 * [Deployed URL](#deployed-url)
 
 ## How it works:
+1. Click ***Get Started*** to sign up or login to the website
+2. Sign up: User can enter username, email, password, and displayname. If the user chose not to enter the displayname, username will automatically be assigned as displayname
+3. When the user visits My Page, they will see their username, displayname, about me, and links that they added
+4. User can edit displayname, about me or links whenever they want IF they are in their pages after logging in
+5. User can visit other user's page
+
 
 ## Features:
+- User accounts with authentication, JWT Token
+- dynamic generation of content using React
+- User can visit other user's page without viewing edit buttons, aka they can modify their page only
+
 
 ## Technologies Used:
 1. React
@@ -50,9 +61,14 @@ const userLinkSchema = new Schema({
 <img src="https://miro.medium.com/max/648/1*iDvsmUwzZQxJSKdL0xzwIA.png" alt="mongooselogo" height="125"/>
 
 
-4. Tailwind
+4. Bootstrap
 
-<img src="https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png" alt="tailwindlogo" height="200">
+![bootstraplogo](https://destatic.blob.core.windows.net/images/bootstrap-logo.png)
+
+
+## Future Development
+- Image upload for the profile
+- mobile responsive design
 
 
 ## Contributors
